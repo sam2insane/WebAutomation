@@ -137,33 +137,4 @@ public class TestBase {
     }
 }
 
-int [][]seat = new int[N+1][10];
-		int num = 0;
-		char s = S.toCharArray();
-		for(int i=0;i<S.length;i++){
-			if(s[i]==' ')continue;
-			else if(s[i]>='0'&&s[i]<='9')
-				num = num*10+s[i]-'0';
-			else{
-				seat[num][s[i]-'A'] = 1;
-				num = 0;
-			}
-		}
-		int ret = 0;
-		for(int i=1;i<=N;i++){
-			if(seat[i][1]+seat[i][2]+seat[i][3]+seat[i][4]==0){
-				seat[i][1] = seat[i][2] = seat[i][3] = seat[i][4] = 1;
-				ret++;
-			}
-			if(seat[i][3]+seat[i][4]+seat[i][5]+seat[i][6]==0){
-				seat[i][3] = seat[i][4] = seat[i][5] = seat[i][6] = 1;
-				ret++;
-			}
-			if(seat[i][5]+seat[i][6]+seat[i][7]+seat[i][8]==0){
-				seat[i][5] = seat[i][6] = seat[i][7] = seat[i][8] = 1;
-				ret++;
-			}
-		}
-		return ret;
-    }
-}
+
